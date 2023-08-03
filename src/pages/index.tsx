@@ -168,9 +168,9 @@ export default function Home() {
           <h2>{title}</h2>
           <p>{description}</p>
           <Link href={link}>
-            {/* hover特效 */}
             <button>
-              <Image src={"/icons/Star.svg"} width={24} height={24} alt="" />
+              {/* Star icon */}
+              <div></div>
               <p>Learn More</p>
             </button>
           </Link>
@@ -244,6 +244,13 @@ export default function Home() {
 
         {/* Projects */}
         <div className={styles.project_container}>{displayProjects}</div>
+
+        {/* Illustrations */}
+        <div className={styles.illustration_container}>
+          <p>illustrations</p>
+          <h2>What’s in my imagination</h2>
+          <div className={styles.illustration_list}></div>
+        </div>
       </main>
 
       <Footer />
