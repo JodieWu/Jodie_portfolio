@@ -1,0 +1,21 @@
+.footer_container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  padding: 24px 80px 24px 80px;
+}
+
+.footer_container p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  flex: 1;
+}
+
+.footer_container ul {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
