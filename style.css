@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Montserrat:wght@400;500;700&display=swap');
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -32,8 +32,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-  display:flex;
-  align-items:center;
+  overflow-x: hidden;
+
 }
 ol, ul {
 	list-style: none;
@@ -98,67 +98,115 @@ p {
   line-height: 140%;
 }
 
-a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-}
 
-.navbar{
-  width: 100%;
-  background-color: #000;
-  height: auto;
+header {
+  background-color: black;
   padding: 16px 80px;
+  
 }
 
+.navbar-container {
+  width: 100%; 
+  justify-content:space-between; 
+  align-items: center; 
+  gap: 48px;
+  display: inline-flex;
 
-.container{
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
 }
 
 .logo {
-  display: inline;
-  width: 172.449px;
-  height: 50px;
-  padding-right: 0px;
-  justify-content: center;
-  align-items: center;
-  gap: 12.207px;
-  flex-shrink: 0;
+  width: 100%; 
+  height: 100%; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 12px; 
+  display: inline-flex;
 }
 
+.menu {
+  width: fit-content;
+  justify-content:right; 
+  align-items: center; 
+  display:inline-flex;
+}
 
-
-  .menu {
-    width:auto;
-    height: auto;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 16px;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
-
- .menu-button {
-  display: flex;
-  align-items: center;
-  width: 140px;
-  padding: 12px 8px;
-  justify-content: center;
-  gap: 8px;
- }
-
- .whiteline {
+.whiteline {
   width: 30px; 
   height: 0px; 
   transform: rotate(90deg); 
   border: 0.50px white solid;
   align-content: center;
- }
+  justify-content: center; 
+}
 
- .menu-button a h5:hover {
-  color:#FCD70D;
- }
+.menu-button {
+  width: 140px; 
+  height: 50px; 
+  padding: 8px 12px;
+  justify-content: center; 
+  align-items: center; 
+  display: inline-flex;
+
+}
+
+.menu-button a {
+  color: #ffffff;
+  font-size: 18px;
+  font-family: Montserrat;
+  font-weight: 700;
+  line-height: 25.20px;
+  text-decoration: none;
+}
+
+.menu-button :hover {
+  color: #FCD70D;
+}
+
+.kv {
+  width: 100%; 
+  height: 100%; 
+  padding-top: 80px; 
+  padding-left: 80px; 
+  padding-right: 80px; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  display: inline-flex;
+  overflow:hidden;
+}
+
+.kv-content-left {
+  width: 100%; 
+  height: 100%; 
+  padding-top: 40px; 
+  padding-bottom: 40px; 
+  padding-left: 40px; 
+  flex-direction: column; 
+  justify-content:flex-end; 
+  align-items: flex-end; 
+  gap: 48px; 
+  display: inline-flex;
+}
+
+.main-headline {
+  width: 100%;
+}
+
+.second-headline {
+  width: 100%;
+}
+
+.tools {
+  width: 100%; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  display: inline-flex;
+  position: relative; 
+  left: -25px;
+}
+
+.kv-content-right {
+  width: 100%; 
+  position: relative; 
+  left: -10px;
+ 
+}
