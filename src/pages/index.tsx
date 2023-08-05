@@ -3,107 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import NavBar from "../components/nav_bar/nav_bar";
 import Footer from "../components/footer/footer";
+import {
+  workContents,
+  toolListContents,
+  skillContents,
+  achieveContents,
+  projectContents,
+} from "../contents/config";
 import { Inter } from "next/font/google";
 import styles from "../styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
-
-const toolListContents = ["Figma", "XD", "AI", "AE", "PS", "Procreate"];
-const workCotents = [
-  {
-    jobTitle: "Senior UI/UX Designer",
-    company: "iSunCloud-Taiwan",
-    period: "2022 - Present",
-  },
-  {
-    jobTitle: "UI/UX Designer",
-    company: "MerMer Inc.",
-    period: "2020 - 2022",
-  },
-  {
-    jobTitle: "Art Director",
-    company: "Penetration Internet Agency",
-    period: "2018 - 2020",
-  },
-  {
-    jobTitle: "Graphic Designer",
-    company: "Freelancer",
-    period: "2014 - 2018",
-  },
-];
-const skillContents = [
-  {
-    icon: "/icons/design.svg",
-    title: "UIUX Design",
-    process: "/process/uiux_progress.svg",
-  },
-  {
-    icon: "/icons/global.svg",
-    title: "User Research",
-    process: "/process/user_progress.svg",
-  },
-  {
-    icon: "/icons/basketBall.svg",
-    title: "Logo Design",
-    process: "/process/logo_progress.svg",
-  },
-  {
-    icon: "/icons/camera.svg",
-    title: "Graphic Illustrations",
-    process: "/process/graphic_progress.svg",
-  },
-  {
-    icon: "/icons/asterisk.svg",
-    title: "Animation",
-    process: "/process/animation_progress.svg",
-  },
-];
-const achieveContents = [
-  {
-    image: "/icons/projects.png",
-    title: "28",
-    subTitle: "Completed Projects",
-  },
-  {
-    image: "/icons/hours.png",
-    title: "16640",
-    subTitle: "Working Hours",
-  },
-  {
-    image: "/icons/clients.png",
-    title: "48",
-    subTitle: "Happy Clients",
-  },
-];
-const projectContents = [
-  {
-    title: "TideBit-Defi",
-    description:
-      "TideBit-Defi is a crypto exchange platform that focus on decentralized financial trading.",
-    image: "/projects/TideBit_Mockup.png",
-    link: "/",
-  },
-  {
-    title: "BAIFA",
-    description:
-      "BAIFA (BOLT AI Forensic Accounting and AuditingI ) is like google in blockchain’s world. You can search information that has been uploaded to the blockchains here. Further more, BOLT-Explorer offers tool for user to trace transactions, audit data, check on black list to reduce the crimes.",
-    image: "/projects/Bolt.png",
-    link: "/",
-  },
-  {
-    title: "BOLT-Mining Software",
-    description:
-      "BOLT-Mining Software allows the user to mine crypto in an easier and interesting way.",
-    image: "/projects/Mining.png",
-    link: "/",
-  },
-  {
-    title: "Other Web Design",
-    description: "I also created a lot of official websites for businesses.",
-    image: "/projects/Web.png",
-    link: "/",
-  },
-];
 
 export default function Home() {
   const displayToolList = toolListContents.map((tool, i) => {
@@ -119,7 +29,7 @@ export default function Home() {
     );
   });
 
-  const displayWorkList = workCotents.map(
+  const displayWorkList = workContents.map(
     ({ jobTitle, company, period }, i) => (
       <li key={i}>
         <h3>{jobTitle}</h3>
@@ -181,6 +91,26 @@ export default function Home() {
       </div>
     )
   );
+
+  const getIllustrationList = (quantity: number) => {
+    const listArr = Array.from({ length: quantity }, (_, i) => i + 1);
+
+    const illustrationList = listArr.map((v) => {
+      const imgSrc = v < 10 ? `0${v}` : `${v}`;
+      return (
+        <li key={v}>
+          <Image
+            src={`/illustrations/${imgSrc}.png`}
+            width={300}
+            height={300}
+            alt=""
+          />
+        </li>
+      );
+    });
+
+    return illustrationList;
+  };
 
   return (
     <>
@@ -247,9 +177,17 @@ export default function Home() {
 
         {/* Illustrations */}
         <div className={styles.illustration_container}>
-          <p>illustrations</p>
+          <p>ILLUSTRATIONS</p>
           <h2>What’s in my imagination</h2>
-          <div className={styles.illustration_list}></div>
+          <div className={styles.illustration_list}>
+            <ul>{getIllustrationList(4)}</ul>
+          </div>
+          <Link href={"/"}>
+            <button>
+              <Image src={"/icons/play.svg"} width={44} height={44} alt="" />
+              <p>See More</p>
+            </button>
+          </Link>
         </div>
       </main>
 
