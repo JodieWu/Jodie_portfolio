@@ -1,8 +1,8 @@
 {
-  "homepage": "https://jodiewu.github.io/Jodie_portfolio",
   "name": "jodie-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jodiewu.github.io/Jodie_portfolio",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
