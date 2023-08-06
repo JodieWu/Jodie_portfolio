@@ -210,3 +210,153 @@ header {
   left: -10px;
  
 }
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.orange-line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.orange-line span {
+  position: relative;
+  top: -120px;
+  right: -100px;
+  display: block;
+  width: 760px;
+  height: 140px;
+  border-right: 2px solid #fcd70d;
+  border-bottom: 2px solid #fcd70d;
+  z-index: -10;
+}
+
+
+.history-list {
+  padding: 0 40px 0 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -120px;
+}
+
+.work-container {
+  padding: 20px 0 60px 20px;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #fcd70d;
+}
+
+.work-container h2,
+.skill-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 47px;
+}
+
+.work-container ul {
+  list-style: disc outside url("pic/Oval.svg");
+}
+
+.work-container li {
+  margin-bottom: 40px;
+  margin-left: -2px;
+  padding-left: 8px;
+}
+
+.work-container li > h3 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.work-container li > h4 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+
+.work-container li > p {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.skill-container {
+  padding: 20px 0 0 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-container li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.skill-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.skill-item > h3 {
+  margin-left: 16px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.uiux-process,
+.user-process,
+.logo-process,
+.graphic-process,
+.animation-process {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 10px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.uiux-process::after,
+.user-process::after,
+.logo-process::after,
+.graphic-process::after,
+.animation-process::after {
+  display: block;
+  content: "";
+  height: 10px;
+  border-radius: 20px;
+  background-color: #fcd70d;
+}
+
+.uiux-process::after {
+  width: 100%;
+}
+
+.user-process::after {
+  width: 87.5%;
+}
+
+.logo-process::after {
+  width: 75%;
+}
+
+.graphic-process::after {
+  width: 63%;
+}
+
+.animation-process::after {
+  width: 62%;
+}
+
+@media screen and (max-width: 1440px) {
+}
