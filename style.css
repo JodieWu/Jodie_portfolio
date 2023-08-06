@@ -233,7 +233,7 @@ nav {
 .kv {
   width: 100%;
   padding: 80px 80px 0 80px;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   display: inline-flex;
   overflow: hidden;
@@ -266,9 +266,8 @@ nav {
 }
 
 .kv-content-right {
-  width: 100%;
   position: relative;
-  left: -10px;
+  right: 10px;
 }
 
 .history-container {
@@ -581,6 +580,48 @@ nav {
   position: relative;
   width: 50%;
   height: 450px;
+}
+
+.illustration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+}
+
+.illustration-container p {
+  color: #fcd70d;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.illustration-container h2 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.illustratio-list ul {
+  padding: 64px 0 64px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.see-more {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: transparent;
+  border: none;
+}
+
+.see-more > p {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 140%;
 }
 
 @media screen and (max-width: 1440px) {
