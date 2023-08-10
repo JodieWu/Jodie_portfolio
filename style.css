@@ -515,7 +515,6 @@ nav {
   border: none;
   display: flex;
   gap: 5px;
-  align-items: flex-start;
   cursor: pointer;
 }
 
@@ -615,11 +614,54 @@ nav {
 }
 
 .see-more {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
   background-color: transparent;
   border: none;
+  width: 160px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.play_animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 100%;
+}
+
+.play_animation::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 6px;
+  border-radius: 9999px;
+  background-color: #fcd70d;
+  width: 44px;
+  height: 100%;
+  z-index: -10;
+  transition: all 0.5s ease-out;
+}
+
+.see-more:hover .play_animation::before {
+  width: 100%;
+  background-color: #000;
+  transition: all 0.5s ease-out;
+}
+
+.play_arrow {
+  background-image: url("pic/icon/evaArrowRightFill0.svg");
+  width: 9px;
+  height: 12px;
+  transition: all 0.5s ease-out;
+}
+
+.see-more:hover .play_arrow {
+  background-image: url("pic/icon/evaArrowRightFill1.svg");
+  transition: all 0.5s ease-out;
 }
 
 .see-more > p {
@@ -627,6 +669,12 @@ nav {
   font-size: 18px;
   font-weight: 700;
   line-height: 140%;
+  transition: all 0.5s ease-out;
+}
+
+.see-more:hover > p {
+  color: #fcd70d;
+  transition: all 0.5s ease-out;
 }
 
 .projects-index-container {
