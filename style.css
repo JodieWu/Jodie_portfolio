@@ -513,7 +513,8 @@ nav {
 }
 
 .learn-more,
-.back-button {
+.back-button,
+.visit-button {
   position: relative;
   background-color: transparent;
   border: none;
@@ -525,7 +526,9 @@ nav {
 .learn-more::before,
 .learn-more::after,
 .back-button::before,
-.back-button::after {
+.back-button::after,
+.visit-button::before,
+.visit-button::after {
   position: absolute;
   left: 0;
   top: 0;
@@ -537,47 +540,54 @@ nav {
 }
 
 .learn-more::before,
-.back-button::before {
+.back-button::before,
+.visit-button::before {
   background-color: #fcd70d;
   opacity: 1;
   transform: translate(0px, 0px);
 }
 
 .learn-more::after,
-.back-button::after {
+.back-button::after,
+.visit-button::after {
   background-color: #000;
   opacity: 0;
   transform: translate(10px, -10px);
 }
 
 .learn-more:hover::before,
-.back-button:hover::before {
+.back-button:hover::before,
+.visit-button:hover::before {
   opacity: 0;
   transform: translate(-10px, 10px);
   transition: all 0.5s ease-in-out;
 }
 
 .learn-more:hover::after,
-.back-button:hover::after {
+.back-button:hover::after,
+.visit-button:hover::after {
   opacity: 1;
   transform: translate(0px, 0px);
   transition: all 0.5s ease-in-out;
 }
 
 .learn-more > p,
-.back-button > p {
+.back-button > p,
+.visit-button > p {
   font-weight: 700;
   margin: 0;
   transition: all 0.5s ease-in-out;
 }
 
 .learn-more:hover > p,
-.back-button:hover > p {
+.back-button:hover > p,
+.visit-button:hover > p {
   color: #fcd70d;
 }
 
 .learn-more > span,
-.back-button > span {
+.back-button > span,
+.visit-button > span {
   background-image: url("pic/icon/Star.svg");
   display: block;
   width: 24px;
@@ -587,7 +597,8 @@ nav {
 }
 
 .learn-more:hover > span,
-.back-button:hover > span {
+.back-button:hover > span,
+.visit-button:hover > span {
   background-image: url("pic/icon/Star_orange.svg");
 }
 
@@ -759,6 +770,13 @@ nav {
 .projects-item-intro ul {
   margin-left: 30px;
   list-style: disc;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.projects-item-intro > p {
+  color: #21272a;
   font-size: 18px;
   font-weight: 400;
   line-height: 140%;
@@ -1065,12 +1083,55 @@ nav {
   margin-bottom: 80px;
 }
 
-.back-button {
+.back-button,
+.visit-button {
   padding: 10px 40px 10px 40px;
 }
 
-.back-button > p {
+.back-button > p,
+.visit-button > p {
   font-size: 18px;
+}
+
+.other-web-item {
+  padding: 0 80px 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.other-web-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+.other-web-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.other-web-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.other-web-intro h2 {
+  color: #21272a;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.other-web-intro h4 {
+  color: #21272a;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.other-web-intro ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer {
