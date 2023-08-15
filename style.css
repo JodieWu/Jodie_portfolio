@@ -1167,6 +1167,13 @@ nav {
   line-height: 110%;
 }
 
+.gallery {
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+}
+
 .footer {
   width: 90%;
   padding: 24px 80px 24px 80px;
